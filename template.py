@@ -27,7 +27,7 @@ list_of_files=[
     "requirements.txt",
     "setup.py",
     "research/trials.ipynb",
-    "test.py"
+    "test.py" 
 
     
 ]
@@ -35,13 +35,13 @@ for filepath in list_of_files:
     filepath= Path(filepath)  #it'll detect os and then give the path
     filedir, filename=os.path.split(filepath)
 
-    if filedir != " ":
+    if filedir != "":
             #we need to check if file dir is empty or not
         os.makedirs(filedir, exist_ok=True)
         logging.info(f"Creating Dir:{filedir} for the file {filename}")
 
     if (not os.path.exists(filepath))or (os.path.getsize(filepath==0)):
-        with open(filepath,'w')as f:
+        with open(filepath,'w') as f:
             pass
             logging.info(f"Creating empty file:{filepath}")
 
